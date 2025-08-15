@@ -6,8 +6,14 @@ import java.net.http.HttpResponse;
 
 public class ConectaApi {
 
+    private String cep;
+
+    public ConectaApi(String cep){
+        this.cep = cep;
+    }
+
     public String ConexaoViaCep() {
-        String endpoint = "https://viacep.com.br/ws/01001000/json/";
+        String endpoint = String.format("https://viacep.com.br/ws/%s/json/", cep);
 
         try {
             HttpClient httpClient = HttpClient.newHttpClient();
