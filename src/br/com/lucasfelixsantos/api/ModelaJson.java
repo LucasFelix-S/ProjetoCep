@@ -4,8 +4,10 @@ import br.com.lucasfelixsantos.model.PojoCep;
 import com.google.gson.Gson;
 
 public class ModelaJson {
-    public void modelandoJson() {
-        ConectaApi conectaApi = new ConectaApi();
+
+
+    public void modelandoJson(String cep) {
+        ConectaApi conectaApi = new ConectaApi(cep);
         Gson gson = new Gson();
         PojoCep pojoCep = gson.fromJson(conectaApi.ConexaoViaCep(), PojoCep.class);
 
