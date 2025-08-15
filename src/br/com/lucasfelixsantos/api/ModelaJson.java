@@ -5,7 +5,6 @@ import com.google.gson.Gson;
 
 public class ModelaJson {
 
-
     public void modelandoJson(String cep) {
         ConectaApi conectaApi = new ConectaApi(cep);
         Gson gson = new Gson();
