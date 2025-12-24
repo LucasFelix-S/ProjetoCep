@@ -1,6 +1,6 @@
-package br.com.lucasfelixsantos.databse;
+package br.com.lucasfelixsantos.model;
 
-public class PojoBanco {
+public class DataBasePojo {
     private String DataBaseUrl;
     private String DataBaseUser;
     private String DataBasePassword;

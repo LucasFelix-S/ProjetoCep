@@ -1,5 +1,5 @@
 package br.com.lucasfelixsantos.model;
-public class PojoCep {
+public class CepPojo {
     public String logradouro;
     public String bairro;
     public String localidade;

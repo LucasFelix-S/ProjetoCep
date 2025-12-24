@@ -1,15 +1,14 @@
 package br.com.lucasfelixsantos.databse;
+import br.com.lucasfelixsantos.model.DataBasePojo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class ConectaBanco {
-    public Connection conexao() {
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=LojaCompleta;encrypt=false";
-        String user = "sa";
-        String password = "!#Y1e3xbf4";
-
+public class DataBaseConnection {
+    public Connection conexao(DataBasePojo dataBasePojo) {
         try{
-            Connection connection = DriverManager.getConnection(url, user, password);
+            Connection connection = DriverManager.getConnection(dataBasePojo.getDataBaseUrl(),
+                    dataBasePojo.getDataBaseUrl(),
+                    dataBasePojo.getDataBasePassword());
             System.out.println("Conexão realizada com sucesso!");
             return connection;
         }catch(Exception e) {
