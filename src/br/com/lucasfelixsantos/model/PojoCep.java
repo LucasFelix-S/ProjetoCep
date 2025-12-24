@@ -1,5 +1,4 @@
 package br.com.lucasfelixsantos.model;
-
 public class PojoCep {
     public String logradouro;
     public String bairro;
@@ -35,6 +34,3 @@ public class PojoCep {
         return ddd;
     }
 }
-
-
-

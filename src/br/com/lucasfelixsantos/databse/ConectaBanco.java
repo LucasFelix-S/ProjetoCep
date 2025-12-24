@@ -1,10 +1,8 @@
 package br.com.lucasfelixsantos.databse;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConectaBanco {
-
     public Connection conexao() {
         String url = "jdbc:sqlserver://localhost:1433;databaseName=LojaCompleta;encrypt=false";
         String user = "sa";

@@ -4,7 +4,6 @@ import br.com.lucasfelixsantos.model.PojoCep;
 import com.google.gson.Gson;
 
 public class ModelaJson {
-
     public void modelandoJson(String cep) {
         ConectaApi conectaApi = new ConectaApi(cep);
         Gson gson = new Gson();
@@ -15,9 +14,7 @@ public class ModelaJson {
             pojoCep.setLogradouro("vazio");
             pojoCep.setBairro("vazio");
         }
-
         ArmazenaBanco armazenaBanco = new ArmazenaBanco();
         armazenaBanco.insertBanco(pojoCep);
-
     }
 }
