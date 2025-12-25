@@ -5,11 +5,11 @@ import java.sql.PreparedStatement;
 
 public class DataBaseInsert {
     public void insertBanco(CepPojo pojoCep) {
-        DataBaseConnection conectaBanco = new DataBaseConnection();
-        String insert = "INSERT INTO Dados_cep(logradouro, bairro, localidade, uf, ddd) VALUES(?, ?, ?, ?, ?)";
+        DataBaseManager conectaBanco = new DataBaseManager();
+        String insert = "INSERT INTO tbCep(logradouro, bairro, localidade, uf, ddd) VALUES(?, ?, ?, ?, ?)";
 
         try{
-            Connection connection = conectaBanco.conexao(null);
+            Connection connection = conectaBanco.conexao();
             PreparedStatement preparedStatement = connection.prepareStatement(insert);
 
             preparedStatement.setString(1, pojoCep.getLogradouro());
@@ -22,7 +22,7 @@ public class DataBaseInsert {
             preparedStatement.executeBatch();
             System.out.println("Inserção ocorrida com sucesso!");
         } catch(Exception e) {
-            System.out.println("Errro de inserção no Banco de Dados: " + e );
+            System.out.println("Erro de inserção no Banco de Dados: " + e );
         }
     }
 }

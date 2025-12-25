@@ -1,9 +1,9 @@
 package br.com.lucasfelixsantos.app;
-
-import br.com.lucasfelixsantos.api.ConectaApi;
+import br.com.lucasfelixsantos.api.ModelaJson;
 
 public class app {
     public static void main(String args[]) {
-        ConectaApi conectaApi = new ConectaApi("37120000");
+        ModelaJson modelaJson = new ModelaJson();
+        modelaJson.modelandoJson("37120000");
     }
 }
