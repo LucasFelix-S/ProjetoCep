@@ -1,13 +1,15 @@
 package br.com.lucasfelixsantos.databse;
 import br.com.lucasfelixsantos.model.DataBasePojo;
 import com.google.gson.Gson;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DataBaseManager {
-    public Connection conexao() {
+    public Connection dbConnection() {
         Connection connection = null;
         try{
             String jsonFile = Files.readString(Paths.get("properties.json"));
@@ -18,10 +20,10 @@ public class DataBaseManager {
                     dataBasePojo.getDataBaseUser(),
                     dataBasePojo.getDataBasePassword());
 
-            System.out.println("Conexão realizada com sucesso!");
+            System.out.println("Connection successfully established!");
             return connection;
-        }catch(Exception e) {
-            System.err.println("Erro de conexão com o banco de dados: " + e);
+        }catch(IOException |SQLException e) {
+            System.err.println("Database connection error:" + e.getMessage());
         }
         return connection;
     }

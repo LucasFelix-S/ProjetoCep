@@ -4,13 +4,11 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class ConectaApi {
+public class ApiConnect {
     private String cep;
-    public ConectaApi(String cep){
-        this.cep = cep;
-    }
+    public ApiConnect(String cep){ this.cep = cep; }
 
-    public String ConexaoViaCep() {
+    public String viaCepConnect() {
         String endpoint = String.format("https://viacep.com.br/ws/%s/json/", cep);
         try {
             HttpClient httpClient = HttpClient.newHttpClient();
@@ -21,7 +19,7 @@ public class ConectaApi {
             HttpResponse<String> httpResponse = httpClient.send(httpResquest, HttpResponse.BodyHandlers.ofString());
             return httpResponse.body();
         } catch(Exception e) {
-            System.out.println("Erro de conexão com a API, erro: " + e);
+            System.out.println("API connection error: " + e);
         }
         return null;
     }

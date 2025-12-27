@@ -1,3 +1,3 @@
 ## ProjetoCep
 
-Projeto desenvolvido com foco em aprendizado prático. A aplicação consome a API pública ViaCEP utilizando `HttpClient` e `HttpRequest`, realiza o tratamento da resposta e persiste os dados em um banco de dados local. O objetivo desse projeto é consolidar conceitos como: consumo de APIs REST em Java, manipulação de requisições e respostas HTTP, persistência de dados e organização e estruturação de código
+Projeto desenvolvido com foco em aprendizado prático. A aplicação consome a API pública ViaCEP utilizando `HttpClient` e `HttpRequest`, realiza o tratamento da resposta e persiste os dados em um banco de dados local. O objetivo desse projeto é consolidar conceitos como: consumo de APIs REST em Java, manipulação de requisições e respostas HTTP, persistência de dados e organização e estruturação de código.
