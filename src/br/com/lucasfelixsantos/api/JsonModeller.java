@@ -1,5 +1,5 @@
 package br.com.lucasfelixsantos.api;
-import br.com.lucasfelixsantos.databse.DataBaseInsert;
+import br.com.lucasfelixsantos.database.DataBaseInsert;
 import br.com.lucasfelixsantos.model.CepPojo;
 import com.google.gson.Gson;
 

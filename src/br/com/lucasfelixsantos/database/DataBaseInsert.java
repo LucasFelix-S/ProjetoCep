@@ -1,4 +1,4 @@
-package br.com.lucasfelixsantos.databse;
+package br.com.lucasfelixsantos.database;
 import br.com.lucasfelixsantos.model.CepPojo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
