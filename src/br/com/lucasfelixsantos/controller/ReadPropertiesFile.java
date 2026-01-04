@@ -1,15 +1,23 @@
 package br.com.lucasfelixsantos.controller;
 import br.com.lucasfelixsantos.model.DataBasePojo;
-import com.google.gson.Gson;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.InputStream;
+import java.util.Properties;
 
 public class ReadPropertiesFile {
-    public static DataBasePojo readinPropertiesFile() {
+    public static DataBasePojo readingPropertiesFile() {
         try{
-            String jsonFile = Files.readString(Path.of("properties.json"));
-            Gson gson = new Gson();
-            return gson.fromJson(jsonFile, DataBasePojo.class);
+            InputStream inputStream = ReadPropertiesFile.class
+                    .getClassLoader()
+                    .getResourceAsStream("database.properties");
+
+            Properties properties = new Properties();
+            properties.load(inputStream);
+
+            String url = properties.getProperty("db.url");
+            String user = properties.getProperty("db.user");
+            String password = properties.getProperty("db.password");
+
+            return new DataBasePojo(url, user, password);
         } catch(Exception e) {
             System.err.println("Error -> " + e.getMessage());
             e.printStackTrace();

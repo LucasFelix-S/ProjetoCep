@@ -23,7 +23,7 @@ public class DataBaseInsert {
             preparedStatement.executeBatch();
             System.out.println("Insertion successful!");
         } catch(SQLException e) {
-            System.err.println("Error inserting into the database: " + e.getMessage());
+            System.err.println("Error inserting into the br.com.lucasfelixsantos.br.com.lucasfelixsantos.api.database: " + e.getMessage());
         }
     }
 }

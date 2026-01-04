@@ -9,7 +9,7 @@ public class DataBaseManager {
     private DataBasePojo dataBasePojo;
 
     public Connection dbConnection() {
-        dataBasePojo = ReadPropertiesFile.readinPropertiesFile();
+        dataBasePojo = ReadPropertiesFile.readingPropertiesFile();
         try{
             Connection connection = DriverManager.getConnection(dataBasePojo.getDataBaseUrl(),
                     dataBasePojo.getDataBaseUser(), dataBasePojo.getDataBasePassword());
