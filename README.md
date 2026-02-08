@@ -8,8 +8,10 @@ A aplicação consome a API pública **ViaCEP**, trata a resposta HTTP retornada
 
 ## Tecnologias Utilizadas
 
-<img src="https://img.shields.io/badge/Java-ED8B00?style=plastic&logo=java&logoColor=white" height="18"/>
-<img src="https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=plastic&logo=microsoft-sql-server&logoColor=white" height="18"/>
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=plastic&logo=java&logoColor=white" height="18"/>
+  <img src="https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=plastic&logo=microsoft-sql-server&logoColor=white" height="18"/>
+</p>
 
 🔹 **Java (puro)** — lógica principal da aplicação  
 🔹 **Gson** — Transformação do Json em POJO  
