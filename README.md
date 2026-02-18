@@ -1,6 +1,6 @@
 # ProjetoCep
 
-🖥️ O **ProjetoCep** é um projeto desenvolvido com foco em aprendizado prático e consolidação de fundamentos de back-end em Java.
+🗺️ O **ProjetoCep** é um projeto desenvolvido com foco em aprendizado prático e consolidação de fundamentos de back-end em Java.
 
 A aplicação consome a API pública **ViaCEP**, trata a resposta HTTP retornada e persiste os dados obtidos em um banco de dados local. O objetivo é exercitar o consumo de APIs REST, manipulação de requisições e respostas HTTP, persistência de dados e organização de código.
 
